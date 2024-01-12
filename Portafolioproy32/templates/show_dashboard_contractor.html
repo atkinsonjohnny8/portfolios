@@ -1,0 +1,79 @@
+{% extends 'templates/base3.html'%}
+
+
+{% block cuerpo %}
+
+			 
+	<div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3    col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" >
+           
+		
+
+
+
+
+	<div class=" table-responsive text-nowrap ">		
+
+		<table id="tabla" class="table table-bordered table-striped w-auto">
+	        <thead>
+	            <tr>
+	             	<th class="text-center" id="project_name">Project name</th>
+	                                     
+	                <th class="text-center" id="dev_name">Developer name</th>
+
+
+	                                   
+	                                      
+	            </tr>
+	        </thead>
+				
+			<tbody id="book-table">
+								<!---AQUI COMIENZA LAS OPCIONES DE PRESENTACION
+									PARA EN CASO DE QUE HAYA QUE MOSTRAR TODOS LOS USUARIOS O SIMPLEMENTE LOS USUARIOS QUE SON RESULTADOS DE UNA BUSQUEDA
+								  --->
+		
+				{% if proj %}
+								
+
+				{% for este in proj %}
+										
+				<tr class="table-info">		
+					<div class="" id="modal-usuario">
+												
+						<td>{{ este.projectname }}</td>
+												
+						<td>{{ este.nickname }}</td>
+
+						
+
+
+
+
+						<!----						
+						<td> 
+							<a  class="btn btn-info " style="font-size: 8; padding: 1em 1em; margin: 0 2em 0 0; border-radius: 2em;"  href="#"> <span class="glyphicon glyphicon-trash"></span> Watch resume 
+							</a> 
+						</td>
+						
+					
+
+
+						<td> 
+							<a  class="btn btn-info " style="font-size: 8; padding: 1em 1em; margin: 0 2em 0 0; border-radius: 2em;"  href="#"> <span class="glyphicon glyphicon-trash"></span> Watch details 
+							</a> 
+						</td>
+
+						---->
+
+
+
+				{% endfor %}
+										
+											
+							{% else %}
+     								 <p>Sorry, there are no projects...</p>
+				{% endif %}	
+
+
+
+
+{% endblock %}

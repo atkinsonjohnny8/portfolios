@@ -1,0 +1,1 @@
+buscar mysql8 connector con python 3.11.4
